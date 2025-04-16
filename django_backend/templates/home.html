@@ -1,6 +1,16 @@
 {% extends "base.html" %}
-{% block title %}Bienvenido{% endblock %}
+
+{% block title %}Business Intelligence Platform{% endblock %}
+
 {% block content %}
-    <h2>Bienvenido a la aplicación</h2>
-    <a href="{% url 'login' %}">Iniciar sesión</a>
+<div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Business Intelligence</h1>
+        <p class="lead">Transform your data into actionable insights</p>
+        <hr class="my-4">
+        <p>Analyze, visualize, and optimize your business operations with our powerful BI tools.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Login</a>
+        <a class="btn btn-outline-secondary btn-lg" href="{% url 'acerca' %}" role="button">Learn More</a>
+    </div>
+</div>
 {% endblock %}

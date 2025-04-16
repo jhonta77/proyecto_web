@@ -202,19 +202,18 @@
 
     <main class="container">
         {% if messages %}
+        <div class="alert alert-info">
             {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                    {{ message }}
-                </div>
+                <p>{{ message }}</p>
             {% endfor %}
+        </div>
         {% endif %}
-
         {% block content %}{% endblock %}
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Portal Empresarial. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Mi Web. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
