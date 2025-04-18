@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Crear nueva tarea</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <label for="id_title">Título:</label><br>
+    {{ form.title }}<br><br>
+
+    <label for="id_description">Descripción:</label><br>
+    {{ form.description }}<br><br>
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <hr>
+
+  <h2>Lista de tareas</h2>
+  <ul>
+    {% for task in tasks %}
+      <li>
+        <strong>{{ task.title }}</strong><br>
+        {{ task.description }}
+      </li>
+    {% empty %}
+      <li>No hay tareas registradas.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
